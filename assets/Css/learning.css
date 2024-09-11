@@ -1,0 +1,10 @@
+/* start activites style */
+#activites .col-lg-4{
+    transition: transform 1.5s;
+}
+
+#activites .col-lg-4:hover{
+    box-shadow: 0 10px 10px 10px #ccc;
+    transform: scale(1.05);
+}
+/* end activites style */

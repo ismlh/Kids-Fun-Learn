@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsElearning-Site</title>
+    <link rel="icon" href="../../assets/imgs/icon.ico" type="image/x-icon">
+
+    <!-- css files -->
+     <link rel="stylesheet" href="../../node_modules/wow.js/css/libs/animate.css">
+     <link rel="stylesheet" href="../../assets/Css/all.min.css">
+     <link rel="stylesheet" href="../../assets/Css/bootstrap.min.css">
+     <link rel="stylesheet" href="../../assets/Css/style.css">
+     <link rel="stylesheet" href="../../assets/Css/calculator.css">
+</head>
+<body>
+    
+
+    <!-- nav Section -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand fw-bolder text-warning" href="../../index.html">FunLearn</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-white w-75 justify-content-evenly">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../math.html">Back</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- end nav section  -->
+
+     <!-- start header section -->
+     <header class="d-flex align-items-center">
+        <div class="container">
+            <p id="Sentence" class="ms-2 text-white"></p>
+        </div>
+    </header>
+   <!-- end header section -->
+
+     
+       <main class="d-flex justify-content-center align-items-center vh-100">
+           <div class="calculator card shadow">
+               <div class="card-body">
+                   <input type="text" id="display" class="form-control mb-3 text-right" readonly>
+                   <div class="row">
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="7">7</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="8">8</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="9">9</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-warning btn-block btn-lg mb-2" data-value="/">/</button>
+                       </div>
+   
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="4">4</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="5">5</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="6">6</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-warning btn-block btn-lg mb-2" data-value="*">*</button>
+                       </div>
+   
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="1">1</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="2">2</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value="3">3</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-warning btn-block btn-lg mb-2" data-value="-">-</button>
+                       </div>
+   
+                       <div class="col-6">
+                           <button class="btn btn-light btn-block btn-lg" data-value="0">0</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-light btn-block btn-lg" data-value=".">.</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-warning btn-block btn-lg" data-value="+">+</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-success btn-block btn-lg" data-value="=">=</button>
+                       </div>
+                       <div class="col-3">
+                           <button class="btn btn-danger btn-block btn-lg" data-value="C">C</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </main>
+      
+     
+   
+
+
+    <script src="../../node_modules/wow.js/dist/wow.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/JS/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/JS/index.js"></script>
+    <script src="../../assets/JS/calculator.js"></script>
+</body>
+</html>

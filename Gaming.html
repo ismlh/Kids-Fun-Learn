@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsElearning-Site</title>
+    <link rel="icon" href="assets/imgs/icon.ico" type="image/x-icon">
+
+    <!-- css files -->
+     <link rel="stylesheet" href="node_modules/wow.js/css/libs/animate.css">
+     <link rel="stylesheet" href="assets/Css/all.min.css">
+     <link rel="stylesheet" href="assets/Css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/Css/style.css">
+</head>
+<body>
+    
+
+    <!-- nav Section -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand fw-bolder text-warning" href="index.html">FunLearn</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-white w-75 justify-content-evenly">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Back</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="GamePages/memory.html" >Memory Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="GamePages/TicTacToe.html">Tic Tac Toe Game</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- end nav section  -->
+
+     <!-- start header section -->
+     <header class="d-flex align-items-center">
+      <div class="container">
+        <p id="Sentence" class="ms-2 text-white"></p>
+      </div>
+    </header>
+   <!-- end header section -->
+
+    <!-- start main content -->
+      <!-- start activites section -->
+      <section id="activites" class="py-5  text-center">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-6 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                    <img src="assets/imgs/Gaming/Memory.png" class="w-50" alt="">
+                    <div class="content  p-2">
+                        <h2>Memory Game </h2>
+                        <a href="GamePages/memory.html" class="btn btn-outline-info rounded-4 text-black fw-bolder">Play IT</a>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.8s">
+                    <img src="assets/imgs/Gaming/TicTacToe.png" class="w-50" alt="">
+                    <div class="content  p-2">
+                        <h2>TicTacToe Game</h2>
+                        <a href="GamePages/TicTacToe.html" class="btn btn-outline-info rounded-4 text-black fw-bolder">Play IT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- end activites section -->
+    <!-- end main content -->
+
+
+    <script src="node_modules/wow.js/dist/wow.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="assets/JS/bootstrap.bundle.min.js"></script>
+    <script src="assets/JS/index.js"></script>
+</body>
+</html>

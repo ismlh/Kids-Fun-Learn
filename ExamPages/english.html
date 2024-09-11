@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Quiz for Kids</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+        }
+        #quiz-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .option {
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+        }
+        .option.selected {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+        .option.incorrect {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="bg-primary text-white text-center py-3">
+        <h1>English Quiz for Kids</h1>
+    </header>
+
+    <div class="container mt-4">
+        <button class="btn btn-outline-warning"><a href="../tests.html" class="text-decoration-none"> Back</a></button>
+        
+        <div id="quiz-container" class="text-center">
+            <div id="question" class="mb-3">
+                <!-- Question will be injected here -->
+            </div>
+            <div id="options" class="mb-4">
+                <!-- Options will be injected here -->
+            </div>
+            <button id="nextBtn" class="btn btn-primary" >Next Question</button>
+            <div id="score" class="mt-4">
+                <!-- Score will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "The book is __ the shelf?",
+                options: ["on", "in", "above", "under"],
+                answer: "on"
+            },
+            {
+                question: "The gift was shared _____ the two siblings",
+                options: ["in", "on", "between", "under"],
+                answer: "between"
+            },
+            {
+                question: "The bird flew _____ the clouds?",
+                options: ["above", "under", " between", "upon"],
+                answer: "above"
+            },
+            {
+                question: "The dog is sitting _____ its owner?",
+                options: ["in", "on", " beside", "upon"],
+                answer: "beside"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const q = questions[currentQuestionIndex];
+                $('#question').text(q.question);
+                $('#options').empty();
+                q.options.forEach(option => {
+                    $('#options').append(`<div class="option" data-answer="${option}">${option}</div>`);
+                });
+                $('#nextBtn').hide();
+                $('.option').removeClass('selected incorrect');
+            } else {
+                $('#question').text('Quiz Complete!');
+                $('#options').html(`<p>Your score: ${score}/${questions.length}</p>`);
+                $('#nextBtn').hide();
+            }
+        }
+
+        $(document).ready(function() {
+            loadQuestion();
+
+            $('#options').on('click', '.option', function() {
+                const selectedAnswer = $(this).data('answer');
+                const correctAnswer = questions[currentQuestionIndex].answer;
+
+                if (selectedAnswer === correctAnswer) {
+                    $(this).addClass('selected');
+                    score++;
+                } else {
+                    $(this).addClass('incorrect');
+                    $('.option').each(function() {
+                        if ($(this).data('answer') === correctAnswer) {
+                            $(this).addClass('selected');
+                        }
+                    });
+                }
+
+                $('#nextBtn').show();
+            });
+
+            $('#nextBtn').on('click', function() {
+                currentQuestionIndex++;
+                loadQuestion();
+            });
+        });
+    </script>
+</body>
+</html>

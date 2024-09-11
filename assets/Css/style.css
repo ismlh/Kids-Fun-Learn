@@ -1,0 +1,195 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.bg-colored{
+    background-color: #FD9795;;
+}
+.txt-colored{
+    color: #FD9795;
+}
+
+
+nav ul li:hover a{
+    color: #ccc;
+    font-size: 1.2rem !important;
+}
+
+header{
+    background-image: url(../imgs/pexels-mccutcheon-1449934.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+
+
+/* start activites style */
+#activites .col-md-3{
+    transition: transform 1.5s;
+}
+
+#activites .col-md-3:hover{
+    box-shadow: 0 10px 10px 10px #ccc;
+    transform: scale(1.05);
+}
+
+#activites .col-md-6{
+    transition: transform 1.5s;
+}
+
+#activites .col-md-6:hover{
+    box-shadow: 0 10px 10px 10px #ccc;
+    transform: scale(1.05);
+}
+/* end activites style */
+
+
+
+
+
+/* start about style */
+#about .col-md-6,.col-md-5{
+    box-shadow: 0 10px 10px 10px #ccc;
+    transition: transform 1.5s;
+}
+#about .col-md-6:hover{
+    transform: scale(1.05);
+}
+#about .col-md-5:hover{
+    transform: scale(1.05);
+}
+/* end about style */
+
+
+
+/* start contact style */
+
+#contact .col-md-6{
+    box-shadow: 0 10px 10px 10px #ccc;
+}
+
+@media screen and  (min-width: 768px) {
+    #contact .col-md-5{
+        box-shadow:none;
+    }
+  }
+
+#contact .col-md-6,.col-md-5{
+    box-shadow: 0 10px 10px 10px #ccc;
+    transition: transform 1.5s;
+}
+#contact .col-md-6:hover{
+    transform: scale(1.05);
+}
+#contact .col-md-5:hover{
+    transform: scale(1.05);
+}
+
+/* end contact style */
+
+
+
+/* start footer style */
+
+footer .icons .icon{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+footer .footer-anchor{
+    transition:  all 1s;
+}
+footer .footer-anchor:hover{
+    margin-left: 20px;
+}
+/* end footer style */
+
+
+#scroll-top{
+    color: #FD9795;
+    background-color: black;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: transform 1.2s;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+}
+#scroll-top:hover{
+    transform: scale(1.2);
+}
+
+
+#loading{
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom:0;
+    left: 0;
+    z-index: 9999999;
+}
+
+
+
+.spinner {
+    margin: 300px auto;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
