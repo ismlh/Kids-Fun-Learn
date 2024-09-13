@@ -12,4 +12,4 @@ All of this is presented in a simple and entertaining manner for children
 
 Fully responsive 📱
 
-Live Demo:https://kids-fun-learn.netlify.app/lerning
+Live Demo: https://kids-fun-learn.netlify.app/
